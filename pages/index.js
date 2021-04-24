@@ -50,6 +50,7 @@ const images = {
 
 const Named = props => {
   const [search, setSearch] = useState('')
+  console.log(data[props.additionalData].first)
   return (
     <Box {...props}>
       <Box
@@ -90,7 +91,7 @@ const Named = props => {
             </Heading>
             <Heading sx={{ fontSize: ['3em', '7em', '9em'] }}>
               {props.country.full == 'The World'
-                ? 'PYTHON'
+                ? 'Python'
                 : title(data[props.additionalData].first, {
                     special: ['SQL', 'PHP'],
                   })
@@ -102,7 +103,7 @@ const Named = props => {
               sx={{
                 marginLeft: '0px',
                 fontWeight: [500, 800, 800],
-                mt: [data[props.additionalData].first == "python" ? 2 : 1],
+                mt: [data[props.additionalData].first === "python" ? 3 : 1],
               }}
             >
               How about other countries?
@@ -276,7 +277,7 @@ export async function getServerSideProps(context) {
   }))
   const ip = context.req.headers['x-forwarded-for']
     ? context.req.headers['x-forwarded-for']
-    : '1.159.255.255'
+    : '118.200.236.168'
   console.log(geoip.lookup(ip))
   const country = filter(
     sortedColours,
