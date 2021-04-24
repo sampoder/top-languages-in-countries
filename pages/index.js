@@ -102,7 +102,7 @@ const Named = props => {
               sx={{
                 marginLeft: '0px',
                 fontWeight: [500, 800, 800],
-                mt: [1, 1, 1],
+                mt: [data[props.additionalData].first == "python" ? 2 : 1],
               }}
             >
               How about other countries?
