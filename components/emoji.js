@@ -5,9 +5,7 @@ const Emoji = ({ emoji }) => (
   <>
     {!isIOS && !isMacOs ? (
       <>
-        <span
-          
-        ></span>
+        <span></span>
         <style>
           {`
       .emoji {
