@@ -18,10 +18,7 @@ const title = require('title')
 const { flag, code, name, countries } = require('country-emoji')
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
-const Emoji = dynamic(
-  () => import('../components/emoji'),
-  { ssr: false }
-)
+const Emoji = dynamic(() => import('../components/emoji'), { ssr: false })
 function isOdd(num) {
   return num % 2
 }
@@ -110,7 +107,9 @@ const Named = props => {
                 mt: [3],
               }}
             >
-              How about {props.country.full == 'The World' ? 'individual' : 'other'} countries?
+              How about{' '}
+              {props.country.full == 'The World' ? 'individual' : 'other'}{' '}
+              countries?
             </Heading>
           </Box>
         </Flex>
@@ -172,7 +171,9 @@ const Named = props => {
                           x == 'bosnia & herzegovina' ? '1.05em' : '1em',
                       }}
                     >
-                      <Emoji emoji={x != 'bosnia & herzegovina' ? flag(x) : '🇧🇦'} />
+                      <Emoji
+                        emoji={x != 'bosnia & herzegovina' ? flag(x) : '🇧🇦'}
+                      />
                     </Text>{' '}
                     {title(x, {
                       special: ['USA', 'UAE'],
@@ -231,8 +232,19 @@ const Named = props => {
           })}
         </Grid>
         <Card p={[3, 3, 3]} sx={{ mt: 3, textAlign: 'center' }}>
-          By <b>@sampoder</b>, open sourced <b>here</b>. Data from{' '}
-          <b>GitHub Education's Annual Report</b>.
+          By{' '}
+          <a href="https://github.com/sampoder">
+            <b>@sampoder</b>
+          </a>
+          , open sourced{' '}
+          <a href="https://github.com/sampoder/top-languages-in-countries">
+            <b>here</b>
+          </a>
+          . Data from{' '}
+          <a href="https://github.com/education/Classroom-Report-2019">
+            <b>GitHub Education's Annual Report</b>
+          </a>
+          .
         </Card>
       </Container>
       <style>
