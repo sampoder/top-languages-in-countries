@@ -6,12 +6,7 @@ const Emoji = ({ emoji }) => (
     {!isIOS && !isMacOs ? (
       <>
         <span
-          dangerouslySetInnerHTML={{
-            __html: twemoji.parse(emoji, {
-              folder: 'svg',
-              ext: '.svg',
-            }),
-          }}
+          
         ></span>
         <style>
           {`
