@@ -16,7 +16,12 @@ import names from '../lib/names.json'
 const { orderBy, filter } = require('lodash')
 const title = require('title')
 const { flag, code, name, countries } = require('country-emoji')
+import dynamic from 'next/dynamic'
 import { useState } from 'react'
+const Emoji = dynamic(
+  () => import('../components/emoji'),
+  { ssr: false }
+)
 function isOdd(num) {
   return num % 2
 }
@@ -167,7 +172,7 @@ const Named = props => {
                           x == 'bosnia & herzegovina' ? '1.05em' : '1em',
                       }}
                     >
-                      {x != 'bosnia & herzegovina' ? flag(x) : '🇧🇦'}
+                      <Emoji emoji={x != 'bosnia & herzegovina' ? flag(x) : '🇧🇦'} />
                     </Text>{' '}
                     {title(x, {
                       special: ['USA', 'UAE'],
