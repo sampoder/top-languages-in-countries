@@ -43,14 +43,13 @@ const images = {
   r: 'https://www.r-project.org/logo/Rlogo.svg',
   c: 'https://cdn.iconscout.com/icon/free/png-512/c-programming-569564.png',
   actionscript:
-    'https://lh3.googleusercontent.com/proxy/https://img.stackshare.io/service/2329/thumb_retina_8ei_UuLc_400x400.png',
+    'https://img.stackshare.io/service/2329/thumb_retina_8ei_UuLc_400x400.png',
   go:
     'https://www.pngkit.com/png/detail/380-3801403_go-programming-language-logo-golang-logo-png.png',
 }
 
 const Named = props => {
   const [search, setSearch] = useState('')
-  console.log(data[props.additionalData].first)
   return (
     <Box {...props}>
       <Box
@@ -86,7 +85,7 @@ const Named = props => {
               {props.country.full.includes('United') ? 'The ' : ''}
               {title(props.additionalData, {
                 special: ['USA', 'UAE'],
-              })}{' '}
+              }).replace('The World', 'The world')}{' '}
               is in love with
             </Heading>
             <Heading sx={{ fontSize: ['3em', '7em', '9em'] }}>
@@ -103,10 +102,10 @@ const Named = props => {
               sx={{
                 marginLeft: '0px',
                 fontWeight: [500, 800, 800],
-                mt: [data[props.additionalData].first === "python" ? 3 : 1],
+                mt: [3],
               }}
             >
-              How about other countries?
+              How about {props.country.full == 'The World' ? 'individual' : 'other'} countries?
             </Heading>
           </Box>
         </Flex>
@@ -277,7 +276,7 @@ export async function getServerSideProps(context) {
   }))
   const ip = context.req.headers['x-forwarded-for']
     ? context.req.headers['x-forwarded-for']
-    : '118.200.236.168'
+    : '212.77.31.255'
   console.log(geoip.lookup(ip))
   const country = filter(
     sortedColours,
