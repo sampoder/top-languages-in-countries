@@ -10,7 +10,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@geist-ui/react": "^2.1.5",
+    "@geist-ui/react": "^2.2.0",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^10.2.3",
     "country-emoji": "^1.5.6",
