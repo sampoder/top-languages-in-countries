@@ -15,7 +15,7 @@
     "@next/mdx": "^10.2.3",
     "country-emoji": "^1.5.6",
     "csvtojson": "^2.0.10",
-    "geoip-country": "^4.0.71",
+    "geoip-country": "^4.1.7",
     "lodash": "^4.17.21",
     "next": "^10.2.3",
     "react": "^17.0.2",
