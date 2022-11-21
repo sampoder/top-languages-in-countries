@@ -497,10 +497,12 @@
   resolved "https://registry.yarnpkg.com/@next/env/-/env-10.2.3.tgz#ede3bbe68cec9939c37168ea2077f9adbc68334e"
   integrity sha512-uBOjRBjsWC4C8X3DfmWWP6ekwLnf2JCCwQX9KVnJtJkqfDsv1yQPakdOEwvJzXQc3JC/v5KKffYPVmV2wHXCgQ==
 
-"@next/mdx@^10.2.3":
-  version "10.2.3"
-  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-10.2.3.tgz#226d25530e4b98af3a200be3e2616beebf81b56c"
-  integrity sha512-hseekptFqOCxLbdaNDS/yelaG2Q2uaNDilnRjq8Uv/LWHuZ9F2cp7ndwTolW9acJsbDedamKRMgdw4V2Fz0pUA==
+"@next/mdx@^13.0.4":
+  version "13.0.4"
+  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-13.0.4.tgz#f1e77eea1a2ad4316a8c29ca0447f13548a6102f"
+  integrity sha512-eKmn8YC5nSBwcvjxBi5X9F+4L0p5+YMJcLXZXaAkfXbjxO1mMpj+EpMn2EINNPIGCRKTypZfZaJgvrxuU8a72g==
+  dependencies:
+    source-map "^0.7.0"
 
 "@next/polyfill-module@10.2.3":
   version "10.2.3"
@@ -3029,6 +3031,11 @@ source-map@^0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
+
+source-map@^0.7.0:
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.4.tgz#a9bbe705c9d8846f4e08ff6765acf0f1b0898656"
+  integrity sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==
 
 space-separated-tokens@^1.0.0:
   version "1.1.5"
